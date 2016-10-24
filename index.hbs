@@ -1,6 +1,11 @@
 {{!< default}}
 
-{{@blog.title}}
-{{@blog.description}}
+<header class="header">
+  {{#if @blog.logo}}
+    <div class="header__logo" style="background-image: url('{{@blog.logo}}');"></div>
+  {{/if}}
+  <h1 class="header__title">{{@blog.title}}</h1>
+  <p class="header__description">{{@blog.description}}</p>
+</header>
 
 {{> loop}}

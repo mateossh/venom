@@ -1,6 +1,14 @@
 {{#foreach posts}}
-  <a href="{{url}}">{{title}}</a>
-  {{excerpt words="50"}}
+  <article class="{{post_class}}">
+    <h2 class="post__title"><a href="{{url}}">{{title}}</a></h2>
+    <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time>
+    <p class="post__excerpt">{{excerpt words="50"}}...</p>
+  </article>
 {{/foreach}}
 
 {{pagination}}
+
+<footer class="footer">
+  <p class="footer__copyright">{{@blog.title}} &copy; {{date format="YYYY"}}</p>
+  <p class="footer__poweredby">Venom is running on <a href"https://ghost.org">Ghost</a></p>
+</footer>
